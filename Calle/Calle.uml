@@ -1,128 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_GgU84CyKEeigz-bBjvtVmw" name="Calle">
-  <packageImport xmi:type="uml:PackageImport" xmi:id="_Gk1pcCyKEeigz-bBjvtVmw">
-    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
-  </packageImport>
-  <packagedElement xmi:type="uml:Package" xmi:id="_NZZtgCyKEeigz-bBjvtVmw" name="Calle">
-    <packagedElement xmi:type="uml:Class" xmi:id="_PK118CyKEeigz-bBjvtVmw" name="Vehículo">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_aZwlcCyKEeigz-bBjvtVmw" name="color" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_eR1qQCyKEeigz-bBjvtVmw" name="velocidad" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_QVMwQCyKEeigz-bBjvtVmw" name="mover">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tj6vACyKEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_UsDbwCyKEeigz-bBjvtVmw" name="detener">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XJMMkCyKEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_ioI8ICyKEeigz-bBjvtVmw" name="VehículoAutomotor" isAbstract="true">
-      <generalization xmi:type="uml:Generalization" xmi:id="_GgkYACyLEeigz-bBjvtVmw" general="_PK118CyKEeigz-bBjvtVmw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_9Vr80CyKEeigz-bBjvtVmw" name="númeroMotor" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_qLSkgCyKEeigz-bBjvtVmw" name="apagar">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_smVDkCyKEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_taN-oCyKEeigz-bBjvtVmw" name="encender">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xI6d8CyKEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_lFbd8CyKEeigz-bBjvtVmw" name="Bicicleta">
-      <generalization xmi:type="uml:Generalization" xmi:id="_HkIGwCyLEeigz-bBjvtVmw" general="_PK118CyKEeigz-bBjvtVmw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_0LW7QCyKEeigz-bBjvtVmw" name="tamañoMarco" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_D7pkMCyLEeigz-bBjvtVmw" name="Carro">
-      <generalization xmi:type="uml:Generalization" xmi:id="_2NIwUCyLEeigz-bBjvtVmw" general="_ioI8ICyKEeigz-bBjvtVmw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_OFe68CyLEeigz-bBjvtVmw" name="númeroChasis" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ogMfMCyLEeigz-bBjvtVmw" name="estiloCarro">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KqAdICyMEeigz-bBjvtVmw" client="_D7pkMCyLEeigz-bBjvtVmw" supplier="_8dtWgCyLEeigz-bBjvtVmw" contract="_8dtWgCyLEeigz-bBjvtVmw"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_TJC7cCyLEeigz-bBjvtVmw" name="activarAlarma">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WJU1kCyLEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZB1TwCyLEeigz-bBjvtVmw" name="desactivarAlarma">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bWHqkCyLEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_rQaHkCyMEeigz-bBjvtVmw" name="sacarCitaRiteve">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uMooICyMEeigz-bBjvtVmw" direction="return">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_GgU84CyKEeigz-bBjvtVmw" name="Calle">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Gk1pcCyKEeigz-bBjvtVmw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_NZZtgCyKEeigz-bBjvtVmw" name="Calle">
+      <packagedElement xmi:type="uml:Class" xmi:id="_PK118CyKEeigz-bBjvtVmw" name="Vehículo">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aZwlcCyKEeigz-bBjvtVmw" name="color" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eR1qQCyKEeigz-bBjvtVmw" name="velocidad" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_29vRYCyMEeigz-bBjvtVmw" name="cancelarCitaRiteve">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5m8vUCyMEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7AR5wCyMEeigz-bBjvtVmw">
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_QVMwQCyKEeigz-bBjvtVmw" name="mover">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tj6vACyKEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_UsDbwCyKEeigz-bBjvtVmw" name="detener">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_XJMMkCyKEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ioI8ICyKEeigz-bBjvtVmw" name="VehículoAutomotor" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_GgkYACyLEeigz-bBjvtVmw" general="_PK118CyKEeigz-bBjvtVmw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9Vr80CyKEeigz-bBjvtVmw" name="númeroMotor" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qLSkgCyKEeigz-bBjvtVmw" name="apagar">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_smVDkCyKEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_taN-oCyKEeigz-bBjvtVmw" name="encender">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xI6d8CyKEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lFbd8CyKEeigz-bBjvtVmw" name="Bicicleta">
+        <generalization xmi:type="uml:Generalization" xmi:id="_HkIGwCyLEeigz-bBjvtVmw" general="_PK118CyKEeigz-bBjvtVmw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0LW7QCyKEeigz-bBjvtVmw" name="tamañoMarco" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_D7pkMCyLEeigz-bBjvtVmw" name="Carro">
+        <generalization xmi:type="uml:Generalization" xmi:id="_2NIwUCyLEeigz-bBjvtVmw" general="_ioI8ICyKEeigz-bBjvtVmw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OFe68CyLEeigz-bBjvtVmw" name="númeroChasis" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ogMfMCyLEeigz-bBjvtVmw" name="estiloCarro">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KqAdICyMEeigz-bBjvtVmw" client="_D7pkMCyLEeigz-bBjvtVmw" supplier="_8dtWgCyLEeigz-bBjvtVmw" contract="_8dtWgCyLEeigz-bBjvtVmw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TJC7cCyLEeigz-bBjvtVmw" name="activarAlarma">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_WJU1kCyLEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ZB1TwCyLEeigz-bBjvtVmw" name="desactivarAlarma">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bWHqkCyLEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rQaHkCyMEeigz-bBjvtVmw" name="sacarCitaRiteve">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uMooICyMEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_29vRYCyMEeigz-bBjvtVmw" name="cancelarCitaRiteve">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5m8vUCyMEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7AR5wCyMEeigz-bBjvtVmw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_e8Qq0CyLEeigz-bBjvtVmw" name="Motocicleta">
+        <generalization xmi:type="uml:Generalization" xmi:id="_5cqnYCyLEeigz-bBjvtVmw" general="_ioI8ICyKEeigz-bBjvtVmw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kEjaUCyLEeigz-bBjvtVmw" name="estiloMoto" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_SIXsICyMEeigz-bBjvtVmw" client="_e8Qq0CyLEeigz-bBjvtVmw" supplier="_8dtWgCyLEeigz-bBjvtVmw" contract="_8dtWgCyLEeigz-bBjvtVmw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_X2XwwCyMEeigz-bBjvtVmw" name="sacarCitaRiteve">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_dU3ZwCyMEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_japsQCyMEeigz-bBjvtVmw" name="cancelarCita">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_lpJkICyMEeigz-bBjvtVmw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nhygwCyMEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uYGGsCyLEeigz-bBjvtVmw" name="VehículoAgrícola">
+        <generalization xmi:type="uml:Generalization" xmi:id="_6lDy0CyLEeigz-bBjvtVmw" general="_ioI8ICyKEeigz-bBjvtVmw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w-5w4CyLEeigz-bBjvtVmw" name="permisoMag">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_8dtWgCyLEeigz-bBjvtVmw" name="Riteve">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_-gaOECyLEeigz-bBjvtVmw" name="sacarCitaRiteve">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BXRGcCyMEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_B4NQUCyMEeigz-bBjvtVmw" name="cancelarCitaRiteve">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_FPqUUCyMEeigz-bBjvtVmw" name="idCita">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HIKuECyMEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_G54O8C5DEeigz-bBjvtVmw" name="Ciudad">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KahEIC5DEeigz-bBjvtVmw" name="listaVehículos" visibility="private" type="_PK118CyKEeigz-bBjvtVmw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RRx24C5DEeigz-bBjvtVmw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RR8O8C5DEeigz-bBjvtVmw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-Z4uYC5DEeigz-bBjvtVmw" name="vehículo" type="_PK118CyKEeigz-bBjvtVmw" association="_-ZyAsC5DEeigz-bBjvtVmw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-Z4uYS5DEeigz-bBjvtVmw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-Z5VcC5DEeigz-bBjvtVmw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UF3ZAi5MEeigz-bBjvtVmw" name="vía" type="_biAP4C5LEeigz-bBjvtVmw" association="_UF2x8C5MEeigz-bBjvtVmw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UF3ZAy5MEeigz-bBjvtVmw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UF3ZBC5MEeigz-bBjvtVmw" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_VAT-IC5DEeigz-bBjvtVmw" name="getListaMotocicletas">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gJ_oUC5DEeigz-bBjvtVmw" type="_e8Qq0CyLEeigz-bBjvtVmw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hYUcoC5DEeigz-bBjvtVmw" name="getListaCarros">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_l14NEC5DEeigz-bBjvtVmw" type="_D7pkMCyLEeigz-bBjvtVmw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rE-vMC5DEeigz-bBjvtVmw" name="getListaBicicletas">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_08UAsC5DEeigz-bBjvtVmw" type="_lFbd8CyKEeigz-bBjvtVmw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pG_JwC5JEeigz-bBjvtVmw" name="agregaCarro">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yDULkC5JEeigz-bBjvtVmw" name="nuevoCarro" type="_D7pkMCyLEeigz-bBjvtVmw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1QX9cC5JEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5v-8UC5JEeigz-bBjvtVmw" name="agregarMotocicleta" concurrency="concurrent">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-939gC5JEeigz-bBjvtVmw" name="nuevaMoto" type="_e8Qq0CyLEeigz-bBjvtVmw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_G1TMwC5KEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_vZoXEC5KEeigz-bBjvtVmw" name="agregarBicicleta">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ylSawC5KEeigz-bBjvtVmw" name="nuevaBicicleta" type="_lFbd8CyKEeigz-bBjvtVmw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_3MqOgC5KEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_tnRMIC5LEeigz-bBjvtVmw" name="agregarVía">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4K9NUC5LEeigz-bBjvtVmw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9Jot0C5LEeigz-bBjvtVmw" name="nuevaVía" type="_biAP4C5LEeigz-bBjvtVmw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BVZjoC5MEeigz-bBjvtVmw" name="getListaVías">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ko020C5MEeigz-bBjvtVmw" type="_biAP4C5LEeigz-bBjvtVmw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_biAP4C5LEeigz-bBjvtVmw" name="Vía">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_md0AsC5MEeigz-bBjvtVmw" name="inicio" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vA1KoC5MEeigz-bBjvtVmw" name="final" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_e8Qq0CyLEeigz-bBjvtVmw" name="Motocicleta">
-      <generalization xmi:type="uml:Generalization" xmi:id="_5cqnYCyLEeigz-bBjvtVmw" general="_ioI8ICyKEeigz-bBjvtVmw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_kEjaUCyLEeigz-bBjvtVmw" name="estiloMoto" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_SIXsICyMEeigz-bBjvtVmw" client="_e8Qq0CyLEeigz-bBjvtVmw" supplier="_8dtWgCyLEeigz-bBjvtVmw" contract="_8dtWgCyLEeigz-bBjvtVmw"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_X2XwwCyMEeigz-bBjvtVmw" name="sacarCitaRiteve">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dU3ZwCyMEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_japsQCyMEeigz-bBjvtVmw" name="cancelarCita">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lpJkICyMEeigz-bBjvtVmw">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nhygwCyMEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
+    <packagedElement xmi:type="uml:Association" xmi:id="_-ZyAsC5DEeigz-bBjvtVmw" memberEnd="_-Z4uYC5DEeigz-bBjvtVmw _-Z5VcS5DEeigz-bBjvtVmw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-Z3gQC5DEeigz-bBjvtVmw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-Z3gQS5DEeigz-bBjvtVmw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_-Z5VcS5DEeigz-bBjvtVmw" name="ciudad" type="_G54O8C5DEeigz-bBjvtVmw" association="_-ZyAsC5DEeigz-bBjvtVmw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BrFZYC5EEeigz-bBjvtVmw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BrHOkC5EEeigz-bBjvtVmw" value="*"/>
+      </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_uYGGsCyLEeigz-bBjvtVmw" name="VehículoAgrícola">
-      <generalization xmi:type="uml:Generalization" xmi:id="_6lDy0CyLEeigz-bBjvtVmw" general="_ioI8ICyKEeigz-bBjvtVmw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w-5w4CyLEeigz-bBjvtVmw" name="permisoMag">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UF2x8C5MEeigz-bBjvtVmw" memberEnd="_UF3ZAi5MEeigz-bBjvtVmw _UF3ZBS5MEeigz-bBjvtVmw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UF3ZAC5MEeigz-bBjvtVmw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UF3ZAS5MEeigz-bBjvtVmw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_UF3ZBS5MEeigz-bBjvtVmw" name="ciudad" type="_G54O8C5DEeigz-bBjvtVmw" association="_UF2x8C5MEeigz-bBjvtVmw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VsmtUC5MEeigz-bBjvtVmw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VsoigC5MEeigz-bBjvtVmw" value="1"/>
+      </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_8dtWgCyLEeigz-bBjvtVmw" name="Riteve">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_-gaOECyLEeigz-bBjvtVmw" name="sacarCitaRiteve">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BXRGcCyMEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_B4NQUCyMEeigz-bBjvtVmw" name="cancelarCitaRiteve">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FPqUUCyMEeigz-bBjvtVmw" name="idCita">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HIKuECyMEeigz-bBjvtVmw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-  </packagedElement>
-  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Gkvi0CyKEeigz-bBjvtVmw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GkxYACyKEeigz-bBjvtVmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
-    </eAnnotations>
-    <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
-  </profileApplication>
-</uml:Model>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Gkvi0CyKEeigz-bBjvtVmw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GkxYACyKEeigz-bBjvtVmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_aDZWIC5GEeigz-bBjvtVmw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aDakQC5GEeigz-bBjvtVmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:Project xmi:id="_pU1f4C5GEeigz-bBjvtVmw" base_Model="_GgU84CyKEeigz-bBjvtVmw"/>
+  <Codegen:GeneratorHint xmi:id="_u0THUC5IEeigz-bBjvtVmw" base_Element="_GgU84CyKEeigz-bBjvtVmw"/>
+</xmi:XMI>
