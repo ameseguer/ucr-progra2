@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
-import Calle.Calle.Carro;
+import Calle.Carro;
 
 
 class TestCarro {
@@ -14,7 +14,7 @@ class TestCarro {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		carroDePrueba = new Carro();
+		//carroDePrueba = new Carro();
 	}
 
 	@DisplayName("Probar getVelocidad después de setVelocidad")
