@@ -8,6 +8,12 @@
       <importedPackage xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_NZZtgCyKEeigz-bBjvtVmw" name="Calle" URI="">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_vHQgYDVrEeioAehIPLRTGg" annotatedElement="_G54O8C5DEeigz-bBjvtVmw">
+        <body>{@link #_KahEIC5DEeigz-bBjvtVmw}  y  {@link #_UF3ZAi5MEeigz-bBjvtVmw} no usan agregación UML para el buen manejo de ArrayList</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_JMJloDVsEeioAehIPLRTGg" annotatedElement="_EFwssDBgEeioAehIPLRTGg _sdY3wDBgEeioAehIPLRTGg _Hion8DB7EeioAehIPLRTGg _L8Sv0DB7EeioAehIPLRTGg _T6nRQDB7EeioAehIPLRTGg">
+        <body>Clases fantasma para el manejo de bilbiotecas internas de Java</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_PK118CyKEeigz-bBjvtVmw" name="Vehículo">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_aZwlcCyKEeigz-bBjvtVmw" name="color" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>

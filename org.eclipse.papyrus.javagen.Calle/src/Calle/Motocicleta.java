@@ -59,7 +59,7 @@ public class Motocicleta extends VehículoAutomotor implements Riteve {
 
 	/**
 	 * 
-	 * @return
+	 * @return 
 	 */
 	public int sacarCitaRiteve() {
 		return 1;
@@ -73,6 +73,15 @@ public class Motocicleta extends VehículoAutomotor implements Riteve {
 	@Override
 	public boolean cancelarCitaRiteve(int idCita) {
 		// TODO Auto-generated method stub
+		return false;
+	}
+
+	/**
+	 * 
+	 * @param idCita 
+	 * @return 
+	 */
+	public boolean cancelarCita(int idCita) {
 		return false;
 	}
 

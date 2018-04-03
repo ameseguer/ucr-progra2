@@ -20,7 +20,6 @@ public class Carro extends VehículoAutomotor implements Riteve {
 	/**
 	 * 
 	 */
-	
 	private ConstantesTipoCarro estiloCarro;
 
 	/**

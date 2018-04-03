@@ -29,19 +29,18 @@ public class Vehículo {
 	}
 	/**
 	 * 
-	 * @return
+	 * @return 
 	 */
 	public boolean mover() {
 		return true;
 	}
 	/**
 	 * 
-	 * @return
+	 * @return 
 	 */
 	public boolean detener() {
 		return true;
 	}
-
 	public String getColor() {
 		return color;
 	}

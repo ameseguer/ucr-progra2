@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_OAF54DYpEeii5cdWy8jD0Q" name="ArchivosCalle">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_OK9GEDYpEeii5cdWy8jD0Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KteAoDYrEeii5cdWy8jD0Q" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_KtensDYrEeii5cdWy8jD0Q" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_KtensTYrEeii5cdWy8jD0Q" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_KtfOwDYrEeii5cdWy8jD0Q" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KtkuUDYrEeii5cdWy8jD0Q" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_KtkuUTYrEeii5cdWy8jD0Q" name="Calle">
+        <packagedElement xmi:type="uml:Class" xmi:id="_KtkuUjYrEeii5cdWy8jD0Q" name="Ciudad"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BGMu8DYsEei6gITWqf8wjA" name="org.eclipse.papyrus.javagen.Calle.ArchivosCalle">
+      <packagedElement xmi:type="uml:Package" xmi:id="_BG1oIDYsEei6gITWqf8wjA" name="ArchivosCalle">
+        <packagedElement xmi:type="uml:Class" xmi:id="_BHPQwDYsEei6gITWqf8wjA" name="ArchivosCalle" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BHQe4DYsEei6gITWqf8wjA" name="rutaArchivo" visibility="private" type="_KtfOwDYrEeii5cdWy8jD0Q" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BHSUEDYsEei6gITWqf8wjA" name="tipoArchivo" visibility="private" type="_BG3dUDYsEei6gITWqf8wjA" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BHTiMDYsEei6gITWqf8wjA" name="lectura" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_f-GnEPaLEeW5KOK8aDMdgA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BHUJQDYsEei6gITWqf8wjA" name="escritura" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_f-GnEPaLEeW5KOK8aDMdgA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BHUwUDYsEei6gITWqf8wjA" name="archivo" visibility="private" type="_BG9j8DYsEei6gITWqf8wjA" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BHiywDYsEei6gITWqf8wjA" name="determinarTipoArchivo" specification="_BHgWgDYsEei6gITWqf8wjA">
+            <language>JAVA</language>
+            <body>
+    /*
+		 * No existe el archivo
+		 */
+    return TiposArchivo.TXT;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BHlPADYsEei6gITWqf8wjA" name="determinarTipoArchivo" specification="_BHkA4DYsEei6gITWqf8wjA">
+            <language>JAVA</language>
+            <body>
+    return true;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_BHV-cDYsEei6gITWqf8wjA" name="ArchivosCalle" visibility="public" method="_BHd6QDYsEei6gITWqf8wjA">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHcsIDYsEei6gITWqf8wjA" name="nuevaRutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_BHgWgDYsEei6gITWqf8wjA" name="determinarTipoArchivo" visibility="private" method="_BHiywDYsEei6gITWqf8wjA">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHg9kDYsEei6gITWqf8wjA" type="_BG3dUDYsEei6gITWqf8wjA" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHiLsDYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_BHkA4DYsEei6gITWqf8wjA" name="determinarTipoArchivo" visibility="private" method="_BHlPADYsEei6gITWqf8wjA">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHkn8DYsEei6gITWqf8wjA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_f-GnEPaLEeW5KOK8aDMdgA"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:OpaqueBehavior" xmi:id="_BHd6QDYsEei6gITWqf8wjA" name="ArchivosCalle" specification="_BHV-cDYsEei6gITWqf8wjA">
+        <language>JAVA</language>
+        <body>
+    this.rutaArchivo = nuevaRutaArchivo;
+    determinarTipoArchivo();
+    switch(this.tipoArchivo) {
+        case JSON:
+            break;
+        case TXT:
+            break;
+        /*
+		 * TODO: terminar XML
+		 */
+        default:
+            this.lectura = false;
+            this.escritura = false;
+            this.archivo = null;
+            break;
+    }
+</body>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BHoSUDYsEei6gITWqf8wjA" name="AdministradorArchivosTxt" visibility="public">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_BHpgcDYsEei6gITWqf8wjA" name="AdministradorArchivosTxt implements AdministradorArchivos" client="_BHoSUDYsEei6gITWqf8wjA" supplier="_BG9j8DYsEei6gITWqf8wjA" contract="_BG9j8DYsEei6gITWqf8wjA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BHsjwDYsEei6gITWqf8wjA" name="cargarCiudad" specification="_BHqHgDYsEei6gITWqf8wjA">
+          <language>JAVA</language>
+          <body>
+    return null;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BHwOITYsEei6gITWqf8wjA" name="guardarCiudad" specification="_BHtx4DYsEei6gITWqf8wjA">
+          <language>JAVA</language>
+          <body>
+    try {
+        ObjectOutputStream out;
+        out = new ObjectOutputStream(new FileOutputStream(rutaArchivo));
+        out.writeObject(ciudad);
+        out.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+        return null;
+    }
+    return null;
+</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BHqHgDYsEei6gITWqf8wjA" name="cargarCiudad" visibility="public" method="_BHsjwDYsEei6gITWqf8wjA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHrVoDYsEei6gITWqf8wjA" type="_KtkuUjYrEeii5cdWy8jD0Q" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHr8sDYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BHtx4DYsEei6gITWqf8wjA" name="guardarCiudad" visibility="public" method="_BHwOITYsEei6gITWqf8wjA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHuY8DYsEei6gITWqf8wjA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_f-GnEPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHvnEDYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHwOIDYsEei6gITWqf8wjA" name="ciudad" type="_KtkuUjYrEeii5cdWy8jD0Q"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_BG9j8DYsEei6gITWqf8wjA" name="AdministradorArchivos">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BHAAMDYsEei6gITWqf8wjA" name="cargarCiudad" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHBOUDYsEei6gITWqf8wjA" type="_KtkuUjYrEeii5cdWy8jD0Q" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHCccDYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BHH8ADYsEei6gITWqf8wjA" name="guardarCiudad" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHIjEDYsEei6gITWqf8wjA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_f-GnEPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHJxMDYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BHK_UDYsEei6gITWqf8wjA" name="ciudad" type="_KtkuUjYrEeii5cdWy8jD0Q"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_BG3dUDYsEei6gITWqf8wjA" name="TiposArchivo" visibility="public">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_BG4rcDYsEei6gITWqf8wjA" name="JSON"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_BG55kDYsEei6gITWqf8wjA" name="XML"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_BG6goDYsEei6gITWqf8wjA" name="CSV"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_BG7HsDYsEei6gITWqf8wjA" name="TXT"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BH1tsDYsEei6gITWqf8wjA" name="AdministradorArchivosJson" visibility="public">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_BH2UwDYsEei6gITWqf8wjA" name="AdministradorArchivosJson implements AdministradorArchivos" client="_BH1tsDYsEei6gITWqf8wjA" supplier="_BG9j8DYsEei6gITWqf8wjA" contract="_BG9j8DYsEei6gITWqf8wjA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BH5YEDYsEei6gITWqf8wjA" name="cargarCiudad" specification="_BH270DYsEei6gITWqf8wjA">
+          <language>JAVA</language>
+          <body>
+    try {
+        BufferedReader lector = new BufferedReader(new FileReader(rutaArchivo));
+        JsonReader lectorJson = new JsonReader(lector);
+        Ciudad tmpCiudad;
+        Gson gson = new Gson();
+        tmpCiudad = gson.fromJson(lectorJson, null);
+        //cerrar descriptores de archivos
+        lectorJson.close();
+        lector.close();
+        //todo salió bien, devuelva la ciudad ya cargada
+        return tmpCiudad;
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        return null;
+    } catch (IOException e) {
+        e.printStackTrace();
+        return null;
+    }
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BH9CcDYsEei6gITWqf8wjA" name="guardarCiudad" specification="_BH6mMDYsEei6gITWqf8wjA">
+          <language>JAVA</language>
+          <body>
+    try {
+        BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaArchivo));
+        //FileWriter escritor = new FileWriter(rutaArchivo);
+        JsonWriter escritorJson = new JsonWriter(escritor);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        gson.toJson(ciudad, ciudad.getClass(), escritorJson);
+        //cerrar descriptores de archivo
+        escritorJson.flush();
+        escritorJson.close();
+        escritor.flush();
+        escritor.close();
+        //Todo salió bien, notificar éxito
+        return true;
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        return false;
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false;
+    }
+</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BH270DYsEei6gITWqf8wjA" name="cargarCiudad" visibility="public" method="_BH5YEDYsEei6gITWqf8wjA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BH3i4DYsEei6gITWqf8wjA" type="_KtkuUjYrEeii5cdWy8jD0Q" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BH4xADYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BH6mMDYsEei6gITWqf8wjA" name="guardarCiudad" visibility="public" method="_BH9CcDYsEei6gITWqf8wjA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BH7NQDYsEei6gITWqf8wjA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_f-GnEPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BH70UDYsEei6gITWqf8wjA" name="rutaArchivo" type="_KtfOwDYrEeii5cdWy8jD0Q"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BH8bYDYsEei6gITWqf8wjA" name="ciudad" type="_KtkuUjYrEeii5cdWy8jD0Q"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OKyuADYpEeii5cdWy8jD0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OKz8IDYpEeii5cdWy8jD0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Kta9UDYrEeii5cdWy8jD0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtbkYDYrEeii5cdWy8jD0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtbkYTYrEeii5cdWy8jD0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtbkYjYrEeii5cdWy8jD0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_KtjgMDYrEeii5cdWy8jD0Q" name="java.lang.String" base_Classifier="_KtfOwDYrEeii5cdWy8jD0Q"/>
+  <PapyrusJava:External xmi:id="_KuNngDYrEeii5cdWy8jD0Q" name="Calle.Ciudad" base_Classifier="_KtkuUjYrEeii5cdWy8jD0Q"/>
+  <standard:Create xmi:id="_BHa28DYsEei6gITWqf8wjA" base_BehavioralFeature="_BHV-cDYsEei6gITWqf8wjA"/>
+</xmi:XMI>

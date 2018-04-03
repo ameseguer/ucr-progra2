@@ -619,6 +619,16 @@
         <element xsi:nil="true"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T6v0JzB7EeioAehIPLRTGg" x="894" y="177"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_vHo64DVrEeioAehIPLRTGg" type="Comment_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_vHo64jVrEeioAehIPLRTGg" type="Comment_BodyLabel_CN"/>
+        <element xmi:type="uml:Comment" href="Calle.uml#_vHQgYDVrEeioAehIPLRTGg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vHo64TVrEeioAehIPLRTGg" x="330" y="280" width="145" height="41"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_JN__wDVsEeioAehIPLRTGg" type="Comment_Shape_CN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_JOAm0DVsEeioAehIPLRTGg" type="Comment_BodyLabel_CN"/>
+        <element xmi:type="uml:Comment" href="Calle.uml#_JMJloDVsEeioAehIPLRTGg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JN__wTVsEeioAehIPLRTGg" x="810" y="140" width="108" height="58"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_NZi3ciyKEeigz-bBjvtVmw"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NZi3cyyKEeigz-bBjvtVmw"/>
     </children>

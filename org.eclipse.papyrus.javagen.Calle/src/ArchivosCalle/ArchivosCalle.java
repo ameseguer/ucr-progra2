@@ -4,6 +4,8 @@
 
 package ArchivosCalle;
 
+import java.util.regex.Pattern;
+
 /**
  * @author amesegue
  *
@@ -34,6 +36,17 @@ public class ArchivosCalle {
 			this.archivo = null;
 			break;
 		}
+	}
+	
+	private TiposArchivo determinarTipoArchivo(String rutaArchivo) {
+		/*
+		 * Existe el archivo
+		 */
+		
+		/*
+		 * No existe el archivo
+		 */
+		return TiposArchivo.TXT;
 	}
 
 	private Boolean determinarTipoArchivo() {

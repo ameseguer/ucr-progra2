@@ -49,7 +49,7 @@ public abstract class VehículoAutomotor extends Vehículo {
 		return true;
 	}
 
-	
+
 
 	/**
 	 * 
@@ -58,6 +58,8 @@ public abstract class VehículoAutomotor extends Vehículo {
 	public boolean encender() {
 		return true;
 	}
+
+
 
 	public String getNúmeroMotor() {
 		return númeroMotor;
