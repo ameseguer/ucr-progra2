@@ -20,6 +20,11 @@ public class Vehículo {
 
 	
 	/**
+	 * 
+	 */
+	public Vehículo() {
+	}
+	/**
 	 * @param color
 	 * @param velocidad
 	 */

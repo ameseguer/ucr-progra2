@@ -2,6 +2,7 @@ package TestCalle;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 
 import ArchivosCalle.AdministradorArchivosJson;
 import ArchivosCalle.AdministradorArchivosTxt;
+import ArchivosCalle.AdministradorArchivosXml;
 import ArchivosCalle.ArchivosCalle;
 
 class TestCiudad {
@@ -40,27 +42,14 @@ class TestCiudad {
 	}
 
 	@Test
-	@DisplayName("Sacar Lista de Carros de la Ciudad")
-	void testCarroCiudad2() {
-		ArrayList<Carro> listaCarros = testCiudad.getListaCarros();
-		/*
-		 * for (Carro carro : listaCarros) {
-		 * System.out.println(carro.getNúmeroChasis()); }
-		 */
-		assertNotNull(listaCarros);
-	}
-
-	@Test
 	@DisplayName("Guardar Ciudad en archivo Json")
 	void testGuardarCiudadJson() {
 		AdministradorArchivosJson backend = new AdministradorArchivosJson();
-		/*
-		 * TODO: autoreconocer tipo
-		 */
 		Boolean resultado = backend.guardarCiudad("/tmp/testCiudad1.json", testCiudad);
 		assertEquals(true, resultado);
 	}
 
+	@Ignore("En progreso")
 	@Test
 	@DisplayName("Guardar Ciudad en archivo Txt")
 	void testGuardarCiudadTxt() {
@@ -76,4 +65,27 @@ class TestCiudad {
 		fail("Ciudad debe ser serializable");
 	}
 
+	@Test
+	@DisplayName("Guardar Ciudad en archivo Xml")
+	void testGuardarCiudadXml() {
+		AdministradorArchivosXml backend = new AdministradorArchivosXml();
+		/*
+		 * TODO autoreconocer tipo
+		 */
+		Boolean resultado = backend.guardarCiudad("/tmp/testCiudad1.xml", testCiudad);
+		assertEquals(true, resultado);
+	}
+
+	@Test
+	@DisplayName("Sacar Lista de Carros de la Ciudad")
+	void testCarroCiudad2() {
+		ArrayList<Carro> listaCarros = testCiudad.getListaCarros();
+
+		/*
+		 * for (Carro carro : listaCarros) {
+		 * System.out.println(carro.getNúmeroChasis()); }
+		 */
+
+		assertNotNull(listaCarros);
+	}
 }

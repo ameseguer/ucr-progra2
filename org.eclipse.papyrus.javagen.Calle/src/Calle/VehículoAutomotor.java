@@ -19,6 +19,14 @@ public abstract class VehículoAutomotor extends Vehículo {
 	
 	
 	/**
+	 * 
+	 */
+	public VehículoAutomotor() {
+	}
+
+
+
+	/**
 	 * @param color
 	 * @param velocidad
 	 */

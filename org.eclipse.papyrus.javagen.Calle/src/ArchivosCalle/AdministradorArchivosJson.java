@@ -3,7 +3,11 @@
  */
 package ArchivosCalle;
 
+import Calle.Carro;
 import Calle.Ciudad;
+import Calle.Motocicleta;
+import Calle.Vehículo;
+import Calle.VehículoAutomotor;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -56,15 +60,24 @@ public class AdministradorArchivosJson implements AdministradorArchivos {
 		try {
 			
 			BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaArchivo));
-			//FileWriter escritor = new FileWriter(rutaArchivo);
 			JsonWriter escritorJson = new JsonWriter(escritor);
-			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			
+			RuntimeTypeAdapterFactory<Vehículo> runtimeTypeAdapterFactory = RuntimeTypeAdapterFactory
+				    .of(Vehículo.class, "type")
+				    .registerSubtype(VehículoAutomotor.class, "vA")
+				    .registerSubtype(Carro.class, "carro")
+				    .registerSubtype(Motocicleta.class, "moto");
+			
+			Gson gson = new GsonBuilder().registerTypeAdapterFactory(runtimeTypeAdapterFactory).create();
+			
 			gson.toJson(ciudad, ciudad.getClass(), escritorJson);
-	
+			gson.toJson(ciudad, Ciudad.class, System.out);
+			gson.toJson(ciudad, System.out);
+			
 			//cerrar descriptores de archivo
-			escritorJson.flush();
+			//escritorJson.flush();
 			escritorJson.close();
-			escritor.flush();
+			//escritor.flush();
 			escritor.close();
 			
 			//Todo salió bien, notificar éxito
@@ -76,9 +89,10 @@ public class AdministradorArchivosJson implements AdministradorArchivos {
 			return false;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 			return false;
 		}
+		
 	}
 
 }

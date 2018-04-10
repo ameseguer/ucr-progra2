@@ -23,6 +23,20 @@ public class Carro extends VehículoAutomotor implements Riteve {
 	private ConstantesTipoCarro estiloCarro;
 
 	/**
+	 * 
+	 */
+	public Carro() {
+	}
+
+	/**
+	 * @param color
+	 * @param velocidad
+	 */
+	public Carro(String color, int velocidad) {
+		super(color, velocidad);
+	}
+
+	/**
 	 * @param color
 	 * @param velocidad
 	 * @param númeroChasis

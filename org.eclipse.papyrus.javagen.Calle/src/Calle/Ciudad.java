@@ -22,6 +22,20 @@ public class Ciudad {
 	 */
 	private ArrayList<Vehículo> listaVehículos;
 	/**
+	 * @return the listaVehículos
+	 */
+	public ArrayList<Vehículo> getListaVehículos() {
+		return listaVehículos;
+	}
+
+	/**
+	 * @param listaVehículos the listaVehículos to set
+	 */
+	public void setListaVehículos(ArrayList<Vehículo> listaVehículos) {
+		this.listaVehículos = listaVehículos;
+	}
+
+	/**
 	 * 
 	 */
 	private ArrayList<Vía> listaVías;
