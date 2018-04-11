@@ -21,19 +21,6 @@ public class Ciudad {
 	 * 
 	 */
 	private ArrayList<Vehículo> listaVehículos;
-	/**
-	 * @return the listaVehículos
-	 */
-	public ArrayList<Vehículo> getListaVehículos() {
-		return listaVehículos;
-	}
-
-	/**
-	 * @param listaVehículos the listaVehículos to set
-	 */
-	public void setListaVehículos(ArrayList<Vehículo> listaVehículos) {
-		this.listaVehículos = listaVehículos;
-	}
 
 	/**
 	 * 
@@ -43,15 +30,31 @@ public class Ciudad {
 	/**
 	 * 
 	 */
+
 	public Ciudad() {
-		this.listaVehículos = new  ArrayList<Vehículo>();
+		this.listaVehículos = new ArrayList<Vehículo>();
 		this.listaVías = new ArrayList<Vía>();
 	}
 
 	/**
+	 * @return the listaVehículos
+	 */
+	public ArrayList<Vehículo> getListaVehículos() {
+		return listaVehículos;
+	}
+
+	/**
+	 * @param listaVehículos
+	 *            the listaVehículos to set
+	 */
+	public void setListaVehículos(ArrayList<Vehículo> listaVehículos) {
+		this.listaVehículos = listaVehículos;
+	}
+
+	/**
 	 * 
-	 * @param nuevoCarro 
-	 * @return 
+	 * @param nuevoCarro
+	 * @return
 	 */
 	public boolean agregaCarro(Carro nuevoCarro) {
 		return this.listaVehículos.add((Vehículo) nuevoCarro);
@@ -59,8 +62,8 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @param nuevaMoto 
-	 * @return 
+	 * @param nuevaMoto
+	 * @return
 	 */
 	public boolean agregarMotocicleta(Motocicleta nuevaMoto) {
 		return this.listaVehículos.add((Vehículo) nuevaMoto);
@@ -68,8 +71,8 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @param nuevaBicicleta 
-	 * @return 
+	 * @param nuevaBicicleta
+	 * @return
 	 */
 	public boolean agregarBicicleta(Bicicleta nuevaBicicleta) {
 		return this.listaVehículos.add((Vehículo) nuevaBicicleta);
@@ -77,8 +80,8 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @return 
-	 * @param nuevaVía 
+	 * @return
+	 * @param nuevaVía
 	 */
 	public boolean agregarVía(Vía nuevaVía) {
 		return false;
@@ -86,7 +89,7 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @return 
+	 * @return
 	 */
 	public Vía getListaVías() {
 		return null;
@@ -94,8 +97,8 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @return 
-	 * @param nuevoVehículo 
+	 * @return
+	 * @param nuevoVehículo
 	 */
 	public boolean agregarVehículo(Vehículo nuevoVehículo) {
 		return this.listaVehículos.add(nuevoVehículo);
@@ -103,7 +106,7 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @return 
+	 * @return
 	 */
 	public ArrayList<Bicicleta> getListaBicicletas() {
 		return null;
@@ -111,7 +114,7 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @return 
+	 * @return
 	 */
 	public ArrayList<Carro> getListaCarros() {
 		ArrayList<Carro> tmpListaCarros = new ArrayList<Carro>();
@@ -119,7 +122,7 @@ public class Ciudad {
 			if (tmpCarro instanceof Carro) {
 				tmpListaCarros.add((Carro) tmpCarro);
 			} else {
-	
+
 			}
 		});
 		return tmpListaCarros;
@@ -127,7 +130,7 @@ public class Ciudad {
 
 	/**
 	 * 
-	 * @return 
+	 * @return
 	 */
 	public ArrayList<Motocicleta> getListaMotocicletas() {
 		return null;

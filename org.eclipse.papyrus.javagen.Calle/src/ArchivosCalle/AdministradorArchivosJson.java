@@ -38,11 +38,11 @@ public class AdministradorArchivosJson implements AdministradorArchivos {
 			JsonReader lectorJson = new JsonReader(lector);
 			Ciudad tmpCiudad;
 			Gson gson = new Gson();
-			tmpCiudad=gson.fromJson(lectorJson,null);
-			//cerrar descriptores de archivos
+			tmpCiudad = gson.fromJson(lectorJson, null);
+			// cerrar descriptores de archivos
 			lectorJson.close();
 			lector.close();
-			//todo salió bien, devuelva la ciudad ya cargada
+			// todo salió bien, devuelva la ciudad ya cargada
 			return tmpCiudad;
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -58,41 +58,40 @@ public class AdministradorArchivosJson implements AdministradorArchivos {
 	@Override
 	public Boolean guardarCiudad(String rutaArchivo, Ciudad ciudad) {
 		try {
-			
+
 			BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaArchivo));
 			JsonWriter escritorJson = new JsonWriter(escritor);
-			
-			RuntimeTypeAdapterFactory<Vehículo> runtimeTypeAdapterFactory = RuntimeTypeAdapterFactory
-				    .of(Vehículo.class, "type")
-				    .registerSubtype(VehículoAutomotor.class, "vA")
-				    .registerSubtype(Carro.class, "carro")
-				    .registerSubtype(Motocicleta.class, "moto");
-			
-			Gson gson = new GsonBuilder().registerTypeAdapterFactory(runtimeTypeAdapterFactory).create();
-			
+
+			//Fábrica para manejar las subclases de vehículo
+			RuntimeTypeAdapterFactory<Vehículo> vehículoTypeAdapterFactory = RuntimeTypeAdapterFactory
+					.of(Vehículo.class, "type").registerSubtype(Vehículo.class, "Vehículo")
+					.registerSubtype(VehículoAutomotor.class, "VehículoAutomotor").registerSubtype(Carro.class, "carro")
+					.registerSubtype(Motocicleta.class, "moto");
+			//Generar estructura Json
+			Gson gson = new GsonBuilder()
+					.setPrettyPrinting()
+					.registerTypeAdapterFactory(vehículoTypeAdapterFactory)
+					.create();
+			//guardar a archivo
 			gson.toJson(ciudad, ciudad.getClass(), escritorJson);
-			gson.toJson(ciudad, Ciudad.class, System.out);
-			gson.toJson(ciudad, System.out);
-			
-			//cerrar descriptores de archivo
-			//escritorJson.flush();
+
+			// cerrar descriptores de archivo
 			escritorJson.close();
-			//escritor.flush();
 			escritor.close();
-			
-			//Todo salió bien, notificar éxito
+
+			// Todo salió bien, notificar éxito
 			return true;
-			
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return false;
 		}
-		
+
 	}
 
 }

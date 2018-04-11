@@ -2,6 +2,8 @@ package TestCalle;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
 import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,9 +22,10 @@ import ArchivosCalle.AdministradorArchivosTxt;
 import ArchivosCalle.AdministradorArchivosXml;
 import ArchivosCalle.ArchivosCalle;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 class TestCiudad {
 
-	static private Ciudad testCiudad;
+	private static Ciudad testCiudad;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -35,15 +38,27 @@ class TestCiudad {
 
 	@Test
 	@DisplayName("Insertar Carro en Ciudad")
-	void testCarroCiudad() {
-		Carro testCarro = new Carro("Verde", 100, "AF01", ConstantesTipoCarro.SEDAN);
-		Boolean resultadoAgrega = testCiudad.agregaCarro(testCarro);
+	void test100CarroCiudad() {
+		Carro testCarro1 = new Carro("Verde", 100, "AF01", ConstantesTipoCarro.SEDAN);
+		Carro testCarro2 = new Carro("Azul", 100, "LU72", ConstantesTipoCarro.PICKUP);
+		Motocicleta testMoto = new Motocicleta("verde",100,"MM01",ConstantesTipoMotocicleta.SCOOTER);
+		testCiudad.agregarMotocicleta(testMoto);
+		Boolean resultadoAgrega = testCiudad.agregaCarro(testCarro1);
+		resultadoAgrega = testCiudad.agregaCarro(testCarro2);
+		assertEquals(true, resultadoAgrega);
+	}
+	
+	@Test
+	@DisplayName("Insertar Moto en Ciudad")
+	void test101MotoCiudad() {
+		Motocicleta testMoto = new Motocicleta("verde",100,"MM01",ConstantesTipoMotocicleta.SCOOTER);
+		Boolean resultadoAgrega = testCiudad.agregarMotocicleta(testMoto);
 		assertEquals(true, resultadoAgrega);
 	}
 
 	@Test
 	@DisplayName("Guardar Ciudad en archivo Json")
-	void testGuardarCiudadJson() {
+	void test200GuardarCiudadJson() {
 		AdministradorArchivosJson backend = new AdministradorArchivosJson();
 		Boolean resultado = backend.guardarCiudad("/tmp/testCiudad1.json", testCiudad);
 		assertEquals(true, resultado);
@@ -52,7 +67,7 @@ class TestCiudad {
 	@Ignore("En progreso")
 	@Test
 	@DisplayName("Guardar Ciudad en archivo Txt")
-	void testGuardarCiudadTxt() {
+	void test201GuardarCiudadTxt() {
 		AdministradorArchivosTxt backend = new AdministradorArchivosTxt();
 		/*
 		 * TODO: autoreconocer tipo
@@ -67,7 +82,7 @@ class TestCiudad {
 
 	@Test
 	@DisplayName("Guardar Ciudad en archivo Xml")
-	void testGuardarCiudadXml() {
+	void test202GuardarCiudadXml() {
 		AdministradorArchivosXml backend = new AdministradorArchivosXml();
 		/*
 		 * TODO autoreconocer tipo
@@ -78,7 +93,7 @@ class TestCiudad {
 
 	@Test
 	@DisplayName("Sacar Lista de Carros de la Ciudad")
-	void testCarroCiudad2() {
+	void testCarro300Ciudad2() {
 		ArrayList<Carro> listaCarros = testCiudad.getListaCarros();
 
 		/*

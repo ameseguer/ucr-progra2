@@ -24,30 +24,14 @@ public class Motocicleta extends VehículoAutomotor implements Riteve {
 	 * @param color
 	 * @param velocidad
 	 * @param númeroMotor
-	 */
-	public Motocicleta(String color, int velocidad, String númeroMotor) {
-		super(color, velocidad, númeroMotor);
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @param color
-	 * @param velocidad
-	 */
-	public Motocicleta(String color, int velocidad) {
-		super(color, velocidad);
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @param color
-	 * @param velocidad
 	 * @param estiloMoto
 	 */
-	public Motocicleta(String color, int velocidad, ConstantesTipoMotocicleta estiloMoto) {
-		super(color, velocidad);
-		this.estiloMoto = estiloMoto;
+	public Motocicleta(String color, int velocidad, String númeroMotor,ConstantesTipoMotocicleta estiloMoto) {
+		super(color, velocidad, númeroMotor);
+		this.estiloMoto=estiloMoto;
+		// TODO Auto-generated constructor stub
 	}
+
 
 	public ConstantesTipoMotocicleta getEstiloMoto() {
 		return estiloMoto;

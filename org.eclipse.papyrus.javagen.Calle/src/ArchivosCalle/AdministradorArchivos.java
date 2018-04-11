@@ -11,6 +11,6 @@ import Calle.Ciudad;
  */
 interface AdministradorArchivos {
 
-	public Ciudad cargarCiudad(String rutaArchivo);
-	public Boolean guardarCiudad(String rutaArchivo, Ciudad ciudad);
+	public Ciudad cargarCiudad(final String rutaArchivo);
+	public Boolean guardarCiudad(final String rutaArchivo, final Ciudad ciudad);
 }
