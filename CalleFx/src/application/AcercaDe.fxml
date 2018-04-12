@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<DialogPane fx:id="acercaDeDialog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="300.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Andrés Meseguer" wrappingWidth="262.21875" />
+            <Hyperlink layoutX="35.0" layoutY="161.0" text="GitHub" />
+            <Hyperlink layoutX="159.0" layoutY="161.0" text="Creative Commons" />
+            <Text layoutX="64.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="andres.meseguer@ucr.ac.cr" />
+            <Text layoutX="64.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Universidad de Costa Rica" />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>
