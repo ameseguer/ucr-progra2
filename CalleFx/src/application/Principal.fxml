@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
@@ -46,7 +50,7 @@
             <items>
                   <MenuItem mnemonicParsing="false" text="Start" />
                   <MenuItem mnemonicParsing="false" text="Stop" />
-              <MenuItem mnemonicParsing="false" text="Import" />
+              <MenuItem fx:id="principalImportarMenuItem" mnemonicParsing="false" onAction="#principalImportarMenuItemAction" text="Import" />
                   <MenuItem mnemonicParsing="false" text="Export" />
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
             </items>
@@ -59,13 +63,24 @@
           <Menu mnemonicParsing="false" text="Help">
             <items>
               <MenuItem fx:id="principalMenuAcercaDe" mnemonicParsing="false" onAction="#principalMenuAcercaDeAction" text="About" />
+                  <RadioMenuItem fx:id="principalMenuDebug" mnemonicParsing="false" onAction="#principalMenuDebugAction" text="Debug" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
    <center>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="ALWAYS" BorderPane.alignment="TOP_LEFT">
+         <content>
+            <Canvas fx:id="principalCanvas" cache="true" height="327.0" onMouseClicked="#principalCanvasMouseClicked" width="419.0">
+               <effect>
+                  <Blend />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Canvas>
+         </content></ScrollPane>
    </center>
    <bottom>
       <Accordion BorderPane.alignment="CENTER">
@@ -74,7 +89,7 @@
                <content>
                   <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <TextArea editable="false" maxWidth="1.7976931348623157E308" prefHeight="200.0" promptText="Logs Here" />
+                        <TextArea fx:id="princpalLogTextArea" editable="false" maxWidth="1.7976931348623157E308" prefHeight="200.0" promptText="Logs Here" />
                      </content>
                   </ScrollPane>
                </content>
