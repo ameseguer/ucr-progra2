@@ -10,6 +10,7 @@ import Calle.Motocicleta;
 import Calle.Vehículo;
 import Calle.Vía;
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 /************************************************************/
 /**
@@ -135,4 +136,23 @@ public class Ciudad {
 	public ArrayList<Motocicleta> getListaMotocicletas() {
 		return null;
 	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public ArrayList<Carro> buscarCarro(Predicate<Carro> filtro){
+		ArrayList<Carro> listaTmp = new ArrayList<Carro>();
+		
+		this.listaVehículos.forEach((tmpCarro) -> {
+			if (tmpCarro instanceof Carro && filtro.test((Carro)tmpCarro)) {
+				listaTmp.add((Carro) tmpCarro);
+			} else {
+
+			}
+		});
+		
+		return listaTmp;
+	}
+	 
 };

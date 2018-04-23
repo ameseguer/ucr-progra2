@@ -55,6 +55,25 @@ class TestCiudad {
 		Boolean resultadoAgrega = testCiudad.agregarMotocicleta(testMoto);
 		assertEquals(true, resultadoAgrega);
 	}
+	
+	@Test
+	@DisplayName("Buscar Carros Verdes")
+	void test102CarroVerde() {
+		ArrayList<Carro> listaTmp;
+		listaTmp = testCiudad.buscarCarro(c->c.getColor().equals("Verde"));
+		assertEquals(1, listaTmp.size());
+	}
+	
+	@Test
+	@DisplayName("Buscar Pickup Verdes")
+	void test103CarroPickupAzul() {
+		ArrayList<Carro> listaTmp;
+		listaTmp = testCiudad.buscarCarro(c->{
+			return c.getColor().equals("Verde") &&
+			c.getEstiloCarro().equals(ConstantesTipoCarro.PICKUP);
+		} );
+		assertEquals(0, listaTmp.size());
+	}
 
 	@Test
 	@DisplayName("Guardar Ciudad en archivo Json")
